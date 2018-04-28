@@ -1,8 +1,9 @@
 import unittest
 import sys
-import os
-# Adds 'src'-folder to PYTHONPATH to allow module imports
-sys.path.append(os.path.abspath(os.path.dirname(__file__).replace('/test', '')))
+from pathlib import Path
+# Adds 'src'-folder to the PATH to allow module imports
+sys.path.append(str(Path('../src').resolve()))
+# Add here furhter imports, that my live in /src
 
       
 def suite():
